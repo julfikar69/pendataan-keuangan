@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateKategoriTable extends Migration
+class FkTransaksiTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,9 @@ class CreateKategoriTable extends Migration
      */
     public function up()
     {
-        Schema::create('kategori', function (Blueprint $table) {
-            $table->id();
-            $table->string('kategori');
-            $table->enum('tipe', ['pendapatan', 'pengeluaran']);
-            $table->timestamps();
+        Schema::table('transaksi', function (Blueprint $table) {
+            $table->foreign('rekening_id')->references('id')->on('rekening');
+            $table->foreign('kategori_id')->references('id')->on('kategori');
         });
     }
 
@@ -28,6 +26,6 @@ class CreateKategoriTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('kategori');
+        //
     }
 }
