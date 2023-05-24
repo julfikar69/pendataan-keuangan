@@ -25,7 +25,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="{{route('home.index')}}" class="nav-link">Home</a>
+        <a href="{{route('transaksi.index')}}" class="nav-link">Home</a>
       </li>
     </ul>
 
@@ -60,7 +60,7 @@
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-    <a href="{{route('home.index')}}" class="brand-link">
+    <a href="{{route('transaksi.index')}}" class="brand-link">
       <span class="brand-text font-weight-light"><?php echo env('APP_NAME'); ?></span>
     </a>
 
