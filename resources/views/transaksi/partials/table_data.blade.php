@@ -1,7 +1,7 @@
 <table class="table table-1 table-hover b-a" id="table-transaksi" aria-label="table-transaksi">
     <thead class="bg-light ">
         <tr>
-            <!-- <th style="width:5%">#</th> -->
+            <th style="width:5%">#</th>
             <th>Kategori</th>
             <th>Rekening</th>
             <th>Nominal</th>
@@ -11,8 +11,12 @@
         </tr>
     </thead>
     <tbody>
+        @php
+            $no=1;
+        @endphp
         @foreach ($datas as $data)
         <tr>
+            <td>{{$no++}}</td>
             <td>{{$data->kategori->kategori}}</td>
             <td>{{$data->rekening->rekening}}</td>
             <td>{{toRupiah($data->jumlah)}}</td>
