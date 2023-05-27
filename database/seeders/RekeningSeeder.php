@@ -2,9 +2,8 @@
 
 namespace Database\Seeders;
 
+use App\Models\Rekening;
 use Illuminate\Database\Seeder;
-
-use DB;
 
 class RekeningSeeder extends Seeder
 {
@@ -22,8 +21,8 @@ class RekeningSeeder extends Seeder
             'Dompet',
             'LinkAja'
         ];
-        foreach($rekening as $val){
-            DB::table('rekening')->insert([
+        foreach ($rekening as $val){
+            Rekening::insert([
                 'rekening' => $val
             ]);
         }

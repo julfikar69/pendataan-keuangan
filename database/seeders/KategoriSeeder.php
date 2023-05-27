@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
-
-use DB;
+use App\Models\Kategori;
 
 class KategoriSeeder extends Seeder
 {
@@ -16,23 +15,23 @@ class KategoriSeeder extends Seeder
     public function run()
     {
         
-        DB::table('kategori')->insert([
+        Kategori::insert([
             'kategori' => 'kendaraan',
             'tipe' => 'pengeluaran'
         ]);
-        DB::table('kategori')->insert([
+        Kategori::insert([
             'kategori' => 'makanan',
             'tipe' => 'pengeluaran'
         ]);
-        DB::table('kategori')->insert([
+        Kategori::insert([
             'kategori' => 'gadget',
             'tipe' => 'pengeluaran'
         ]);
-        DB::table('kategori')->insert([
+        Kategori::insert([
             'kategori' => 'gaji',
             'tipe' => 'pendapatan'
         ]);
-        DB::table('kategori')->insert([
+        Kategori::insert([
             'kategori' => 'kiriman',
             'tipe' => 'pendapatan'
         ]);
