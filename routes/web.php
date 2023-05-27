@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TransaksiController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::resource('transaksi', TransaksiController::class);
+
+Route::get('/', [TransaksiController::class, 'index'])->name('transaksi.index');
+Route::post('/', [TransaksiController::class, 'search'])->name('transaksi.search');

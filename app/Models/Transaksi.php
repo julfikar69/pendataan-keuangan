@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
+use App\Models\Rekening;
+use App\Models\Kategori;
+
 class Transaksi extends Model
 {
     use HasFactory;
@@ -16,4 +19,13 @@ class Transaksi extends Model
         "keterangan",
         "tanggal"
     ];
+
+    public function rekening()
+    {
+        return $this->belongsTo(Rekening::class);
+    }
+    public function kategori()
+    {
+        return $this->belongsTo(Kategori::class);
+    }
 }
