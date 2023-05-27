@@ -140,7 +140,7 @@ class TransaksiController extends Controller
         ]);
 
         if ($res) {
-            return redirect()->back()->with('success', 'Berhasil Mengubah Data');
+            return redirect()->route('transaksi.index')->with('success', 'Berhasil Mengubah Data');
         } else {
             return redirect()->back()->with('error', 'Berhasil Mengubah Data');
         }

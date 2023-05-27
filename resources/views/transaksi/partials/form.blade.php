@@ -39,12 +39,12 @@
         </div>
         <div class="form-group">
             <label for="Nominal">Nominal</label>
-            <input type="number" name="nominal" class="form-control" id="nominal"
-            value="{{ @$data->jumlah }}">
+            <input type="number" name="nominal" class="form-control" id="nominal" value="{{ @$data->jumlah }}">
         </div>
         <div class="form-group">
             <label for="Keterangan">Keterangan</label>
-            <textarea name="keterangan" class="form-control" id="keterangan" cols="30" rows="5"></textarea>
+            <textarea name="keterangan" class="form-control" id="keterangan"
+             cols="30" rows="5">{{ @$data->keterangan }}</textarea>
         </div>
 
         <div class="form-group">
@@ -57,7 +57,7 @@
                 <div class="col-6">
                     <label for="Jam">Jam</label>
                     <input type="time" name="jam" class="form-control" id="jam"
-                    value="{{ !empty(@$data->kategori) ? getTimeOnly(@$data->tanggal,'H:i') : '' }}">
+                     value="{{ !empty(@$data->kategori) ? getTimeOnly(@$data->tanggal,'H:i') : '' }}">
                 </div>
             </div>
         </div>
